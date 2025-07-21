@@ -2,7 +2,6 @@
 
 import FluidCursor from '@/components/FluidCursor';
 import { Button } from '@/components/ui/button';
-import { GithubButton } from '@/components/ui/github-button';
 import WelcomeModal from '@/components/welcome-modal';
 import { motion } from 'framer-motion';
 import {
@@ -106,17 +105,6 @@ export default function Home() {
         >
           Dorian Lopez
         </div>
-      </div>
-
-      {/* GitHub button */}
-      <div className="absolute top-6 right-8 z-20">
-        <GithubButton
-          //targetStars={68}
-          animationDuration={1.5}
-          size={'sm'}
-          label=''
-          repoUrl="https://github.com/winvdaking/portfolio-main"
-        />
       </div>
 
       <div className="absolute top-6 left-6 z-20">
