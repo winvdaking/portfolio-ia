@@ -68,7 +68,7 @@ const Skills = () => {
         staggerChildren: 0.1,
       },
     },
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -77,7 +77,7 @@ const Skills = () => {
       y: 0,
       transition: { duration: 0.5, ease: [0.19, 1, 0.22, 1] },
     },
-  };
+  } as const;
 
   const badgeVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -86,7 +86,7 @@ const Skills = () => {
       scale: 1,
       transition: { duration: 0.3, ease: 'easeOut' },
     },
-  };
+  } as const;
 
   return (
     <motion.div
