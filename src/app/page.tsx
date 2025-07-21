@@ -56,17 +56,27 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'tween', ease: 'easeOut', duration: 0.8 },
+      transition: {
+        type: 'tween',
+        ease: 'easeOut',
+        duration: 0.8,
+      },
     },
-  };
+  } as const;
+
   const bottomElementVariants = {
     hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'tween', ease: 'easeOut', duration: 0.8, delay: 0.2 },
+      transition: {
+        type: 'tween',
+        ease: 'easeOut',
+        duration: 0.8,
+        delay: 0.2,
+      },
     },
-  };
+  } as const;
 
   useEffect(() => {
     // Précharger les assets du chat en arrière-plan
