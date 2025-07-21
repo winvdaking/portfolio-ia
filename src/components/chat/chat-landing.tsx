@@ -13,19 +13,19 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery }) => {
   const suggestedQuestions = [
     {
       icon: <MessageSquare className="h-4 w-4" />,
-      text: 'Who are you?',
+      text: 'Qui es-tu ?',
     },
     {
       icon: <Code className="h-4 w-4" />,
-      text: 'What projects have you worked on?',
+      text: 'Sur quels projets as-tu travaillé ?',
     },
     {
       icon: <Award className="h-4 w-4" />,
-      text: 'What are your skills?',
+      text: 'Quelles sont tes compétences ?',
     },
     {
       icon: <Mail className="h-4 w-4" />,
-      text: 'How can I contact you?',
+      text: 'Comment puis-je te contacter ?',
     },
   ];
 
@@ -38,7 +38,7 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery }) => {
         staggerChildren: 0.1,
       },
     },
-  };
+  } as const;
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -50,7 +50,7 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery }) => {
         ease: [0.25, 0.1, 0.25, 1],
       },
     },
-  };
+  } as const;
 
   return (
     <motion.div
@@ -62,10 +62,10 @@ const ChatLanding: React.FC<ChatLandingProps> = ({ submitQuery }) => {
       {/* Welcome message */}
       <motion.div className="mb-8 text-center" variants={itemVariants}>
         <h2 className="mb-3 text-2xl font-semibold">
-            I'm Raphael's digital twin
+          Je suis l'assistant numérique de Dorian Lopez
         </h2>
         <p className="text-muted-foreground mx-auto max-w-md">
-          The first portfolio that fit YOU needs.
+          Le premier portfolio qui s'adapte à VOS besoins.
         </p>
       </motion.div>
 
