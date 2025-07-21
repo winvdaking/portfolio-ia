@@ -33,7 +33,6 @@ const ClientOnly = ({ children }) => {
   if (!hasMounted) {
     return null;
   }
-
   return <>{children}</>;
 };
 
@@ -287,11 +286,11 @@ const Chat = () => {
         />
         <div className="">
           <GithubButton
-          animationDuration={1.5}
-          label="Star"
-          size={'sm'}
-          repoUrl="https://github.com/toukoum/portfolio"
-        />
+            animationDuration={1.5}
+            label="Credit to"
+            size={'sm'}
+            repoUrl="https://github.com/toukoum/portfolio"
+          />
         </div>
       </div>
 
@@ -394,12 +393,12 @@ const Chat = () => {
           </div>
         </div>
         <a
-          href="https://x.com/toukoumcode"
+          href="https://x.com/winvdaking"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed right-3 bottom-0 z-10 mb-4 hidden cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-sm hover:underline md:block"
         >
-          @toukoum
+          @winv
         </a>
       </div>
     </div>
@@ -407,3 +406,4 @@ const Chat = () => {
 };
 
 export default Chat;
+

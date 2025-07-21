@@ -7,13 +7,13 @@ import React from 'react';
 export function Presentation() {
   // Personal information
   const profile = {
-    name: 'Raphael Giraud',
-    age: '21 years old',
-    location: 'Paris, France',
+    name: 'Dorian LOPEZ',
+    age: '23 ans',
+    location: 'Troussey, France',
     // Add a newline character after the emoji
     description:
-      "Hey 👋\nI'm Raph also known as Toukoum. I'm a developer specializing in AI at 42 Paris. I'm working at LightOn AI in Paris. I'm passionate about AI, tech, Entrepreneurship and SaaS tech.",
-    src: '/profil-raph.png',
+      "Passionné, j'allie expertise technique et compétences en gestion de projet. Mon profil hybride me permet de concevoir des solutions web adaptées. Curieux, rigoureux et orienté résultats, je m'investis dans la transformation digitale en combinant innovation, coordination d'équipe et vision produit.",
+    src: '/pdp.png',
     fallbackSrc:
       'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3',
   };
@@ -103,7 +103,7 @@ export function Presentation() {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="mt-4 flex flex-wrap gap-2"
           >
-            {['AI', 'Developer', '42 Paris', 'Sport', 'SaaS Builder'].map(
+            {['FullStack', 'Chef de projet', 'Laravel', 'React', 'VueJS'].map(
               (tag) => (
                 <span
                   key={tag}

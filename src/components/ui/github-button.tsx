@@ -37,7 +37,7 @@ const githubButtonVariants = cva(
 
 interface GithubButtonProps
   extends React.ComponentProps<'button'>,
-    VariantProps<typeof githubButtonVariants> {
+  VariantProps<typeof githubButtonVariants> {
   roundStars?: boolean;
   fixedWidth?: boolean;
   initialStars?: number;
@@ -96,13 +96,6 @@ function GithubButton({
     }
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
-
-  // Fetch stars from GitHub API
-  useEffect(() => {
-    fetch('/api/github-stars')
-      .then((res) => res.json())
-      .then((data) => setTargetStars(data.stars));
-  }, []);
 
   const startAnimation = useCallback(() => {
     if (isAnimating || hasAnimated || targetStars === null) return;
@@ -215,7 +208,7 @@ function GithubButton({
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
-      aria-label={repoUrl ? `Star ${label} on GitHub` : label}
+      aria-label={repoUrl ? `` : label}
       {...props}
     >
       {showGithubIcon && (

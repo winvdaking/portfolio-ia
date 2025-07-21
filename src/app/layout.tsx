@@ -7,21 +7,21 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 // Load Inter font for non-Apple devices
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Toukoum Portfolio",
-  description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
+  title: "Dorian Lopez Portfolio",
+  description: "Portfolio interactif avec un Memoji propulsé par l'IA qui répond aux questions sur moi, mes compétences et mon expérience",
   keywords: [
-    "Toukoum", 
-    "Portfolio", 
-    "Developer", 
-    "AI", 
-    "Interactive", 
-    "Memoji", 
+    "Dorian Lopez",
+    "Portfolio",
+    "Developer",
+    "AI",
+    "Interactive",
+    "Memoji",
     "Web Development",
     "Full Stack",
     "Next.js",
@@ -30,23 +30,23 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Toukoum",
-      url: "https://toukoum.fr",
+      url: "https://winv.fr",
     },
   ],
   creator: "Toukoum",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toukoum.fr",
-    title: "Toukoum Portfolio",
+    url: "https://winv.fr",
+    title: "Dorian Lopez Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Toukoum Portfolio",
+    siteName: "Dorian Lopez Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toukoum Portfolio",
+    title: "Dorian Lopez Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@toukoum",
+    creator: "@winv",
   },
   icons: {
     icon: [

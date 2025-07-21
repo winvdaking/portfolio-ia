@@ -3,9 +3,9 @@ import { z } from 'zod';
 
 export const getContact = tool({
   description:
-    'This tool show a my contact informations.',
+    'Cet outil affiche les informations de contact de Dorian LOPEZ.',
   parameters: z.object({}),
   execute: async () => {
-    return "Here is my contact informations above, Feel free to contact me I will be happy to answer you 😉";
+    return "Vous pouvez trouver mes informations de contact (email, LinkedIn, Github, etc.) dans la section 'Contact' juste en dessous. N'hésitez pas à me contacter !";
   },
 });

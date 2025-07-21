@@ -16,21 +16,28 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+import { Presentation } from '@/components/presentation';
+import Experience from '@/components/Experience';
+import Education from '@/components/Education';
+import Skills from '@/components/skills';
+import AllProjects from '@/components/projects/AllProjects';
+import { Resume } from '@/components/resume';
+import Contact from '@/components/contact';
 
 /* ---------- quick-question data ---------- */
 const questions = {
-  Me: 'Who are you? I want to know more about you.',
-  Projects: 'What are your projects? What are you working on right now?',
-  Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: 'What’s the craziest thing you’ve ever done? What are your hobbies?',
-  Contact: 'How can I contact you?',
+  Moi: 'Qui es-tu ?  Je veux en savoir plus sur toi.',
+  Expériences: 'Quels sont tes projets ? Sur quoi travailles-tu en ce moment ?',
+  Compétences: 'Quelles sont tes compétences ? Donne-moi une liste de tes compétences (techniques et savoir-être).',
+  'Centres d\'intérêt': 'Quels sont tes passe-temps ?',
+  Contact: 'Comment puis-je te contacter ?',
 } as const;
 
 const questionConfig = [
-  { key: 'Me', color: '#329696', icon: Laugh },
-  { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
-  { key: 'Skills', color: '#856ED9', icon: Layers },
-  { key: 'Fun', color: '#B95F9D', icon: PartyPopper },
+  { key: 'Moi', color: '#329696', icon: Laugh },
+  { key: 'Expériences', color: '#3E9858', icon: BriefcaseBusiness },
+  { key: 'Compétences', color: '#856ED9', icon: Layers },
+  { key: 'Centres d\'intérêt', color: '#B95F9D', icon: PartyPopper },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ] as const;
 
@@ -86,9 +93,8 @@ export default function Home() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center overflow-hidden">
         <div
           className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
-          style={{ marginBottom: '-2.5rem' }}
         >
-          Toukoum
+          Dorian Lopez
         </div>
       </div>
 
@@ -97,15 +103,15 @@ export default function Home() {
         <GithubButton
           //targetStars={68}
           animationDuration={1.5}
-          label="Star"
           size={'sm'}
-          repoUrl="https://github.com/toukoum/portfolio"
+          label=''
+          repoUrl="https://github.com/winvdaking/portfolio-main"
         />
       </div>
 
       <div className="absolute top-6 left-6 z-20">
         <button
-          onClick={() => goToChat('Are you looking for an internship?')}
+          onClick={() => goToChat('Tu recherches un développeur ?')}
           className="relative flex cursor-pointer items-center gap-2 rounded-full border bg-white/30 px-4 py-1.5 text-sm font-medium text-black shadow-md backdrop-blur-lg transition hover:bg-white/60 dark:border-white dark:text-white dark:hover:bg-neutral-800"
         >
           {/* Green pulse dot */}
@@ -113,7 +119,7 @@ export default function Home() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
           </span>
-          need an intern?
+          Besoin d'un développeur ?
         </button>
       </div>
 
@@ -129,10 +135,10 @@ export default function Home() {
         </div>
 
         <h2 className="text-secondary-foreground mt-1 text-xl font-semibold md:text-2xl">
-          Hey, I'm Raphael 👋
+          Hey, je suis Dorian Lopez 👋
         </h2>
         <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
-          AI portfolio
+          Développeur FullStack, Apprenti Chef de projet
         </h1>
       </motion.div>
 
@@ -169,7 +175,7 @@ export default function Home() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask me anything…"
+              placeholder="Posez-moi une question..."
               className="w-full border-none bg-transparent text-base text-neutral-800 placeholder:text-neutral-500 focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-500"
             />
             <button
@@ -200,6 +206,13 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
+      <Presentation />
+      <Experience />
+      <Education />
+      <Skills />
+      <AllProjects />
+      <Resume />
+      <Contact />
       <FluidCursor />
     </div>
   );

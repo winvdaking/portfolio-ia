@@ -7,33 +7,21 @@ import { ChevronRight } from 'lucide-react';
 export function Contact() {
   // Contact information
   const contactInfo = {
-    name: 'Raphael Giraud',
-    email: 'raphaelgiraud12@gmail.com',
-    handle: '@Raphael.Giraud',
+    name: 'Dorian LOPEZ',
+    email: 'pro.dorianlopez@gmail.com',
+    handle: '@winvdaking',
     socials: [
       {
         name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/raphael-giraud-60939519a/',
-      },
-      {
-        name: 'Youtube',
-        url: 'https://www.youtube.com/@toukoum',
-      },
-      {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/raphael.giraud/',
-      },
-      {
-        name: 'Discord',
-        url: 'https://discord.com/users/toukoum',
+        url: 'https://www.linkedin.com/in/winvdaking',
       },
       {
         name: 'Github',
-        url: 'https://github.com/toukoum',
+        url: 'https://github.com/winvdaking',
       },
       {
-        name: 'X',
-        url: 'https://x.com/toukoumcode',
+        name: 'winv.me',
+        url: 'https://www.winv.me',
       },
     ],
   };

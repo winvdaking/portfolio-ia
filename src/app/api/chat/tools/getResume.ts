@@ -3,9 +3,9 @@ import { z } from 'zod';
 
 export const getResume = tool({
   description:
-    'This tool show my resume.',
+    'Cet outil affiche le CV de Dorian LOPEZ.',
   parameters: z.object({}),
   execute: async () => {
-    return "You can download my resume by clicking on the link above.";
+    return "Vous pouvez télécharger mon CV en cliquant sur le lien juste au-dessus.";
   },
 });

@@ -3,9 +3,9 @@ import { z } from 'zod';
 
 export const getSkills = tool({
   description:
-    'This tool show a list of my skills.',
+    'Cet outil affiche une liste des compétences de Dorian LOPEZ.',
   parameters: z.object({}),
   execute: async () => {
-    return "You can see all my skills above.";
+    return "Vous pouvez voir toutes mes compétences affichées juste au-dessus.";
   },
 });
