@@ -4,7 +4,6 @@ import { Presentation } from '../presentation';
 import AllProjects from '../projects/AllProjects';
 import Resume from '../resume';
 import Skills from '../skills';
-import Sports from '../sport';
 
 interface ToolRendererProps {
   toolInvocations: any[];
@@ -63,12 +62,6 @@ export default function ToolRenderer({
               </div>
             );
 
-          case 'getSports':
-            return (
-              <div key={toolCallId} className="w-full rounded-lg">
-                <Sports />
-              </div>
-            );
 
           // Default renderer for other tools
           default:
@@ -80,7 +73,7 @@ export default function ToolRenderer({
                 <div className="mb-2 flex items-center justify-between">
                   <h3 className="text-lg font-medium">{toolName}</h3>
                   <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs text-green-800 dark:bg-green-900 dark:text-green-100">
-                    Tool Result
+                    Résultat
                   </span>
                 </div>
                 <div className="mt-2">

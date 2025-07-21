@@ -20,8 +20,8 @@ export function Contact() {
         url: 'https://github.com/winvdaking',
       },
       {
-        name: 'winv.me',
-        url: 'https://www.winv.me',
+        name: 'dorianlopez.fr',
+        url: 'https://www.dorianlopez.fr',
       },
     ],
   };

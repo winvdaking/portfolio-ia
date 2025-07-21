@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Toukoum",
-      url: "https://winv.fr",
+      name: "Dorian LOPEZ",
+      url: "https://dorianlopez.fr",
     },
   ],
-  creator: "Toukoum",
+  creator: "Dorian LOPEZ",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://winv.fr",
+    url: "https://dorianlopez.fr",
     title: "Dorian Lopez Portfolio",
     description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
     siteName: "Dorian Lopez Portfolio",

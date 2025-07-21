@@ -1,4 +1,5 @@
-import { openai } from '@ai-sdk/openai';
+import { groq } from '@ai-sdk/groq';
+import { ollama } from 'ollama-ai-provider';
 import { streamText } from 'ai';
 import { SYSTEM_PROMPT } from './prompt';
 import { getContact } from './tools/getContact';
@@ -12,7 +13,6 @@ import { getVolunteering } from './tools/getVolunteering';
 
 export const maxDuration = 30;
 
-// ❌ Pas besoin de l'export ici, Next.js n'aime pas ça
 function errorHandler(error: unknown) {
   if (error == null) {
     return 'Unknown error';
@@ -44,8 +44,14 @@ export async function POST(req: Request) {
       getVolunteering,
     };
 
+    // Fallback automatique : Ollama en local si USE_OLLAMA=true, sinon Groq
+    const useOllama = process.env.USE_OLLAMA === 'true';
+    const model = useOllama
+      ? ollama('mistral')
+      : groq('llama-3.3-70b-versatile');
+
     const result = streamText({
-      model: openai('gpt-4o-mini'),
+      model,
       messages,
       toolCallStreaming: true,
       tools,

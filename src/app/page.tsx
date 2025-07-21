@@ -15,13 +15,6 @@ import {
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { Presentation } from '@/components/presentation';
-import Experience from '@/components/Experience';
-import Education from '@/components/Education';
-import Skills from '@/components/skills';
-import AllProjects from '@/components/projects/AllProjects';
-import { Resume } from '@/components/resume';
-import Contact from '@/components/contact';
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -99,9 +92,9 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-10 md:pb-20">
       {/* big blurred footer word */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 flex justify-center overflow-hidden">
+      <div className="pointer-events-none absolute inset-x-0 bottom-5 flex justify-center overflow-hidden">
         <div
-          className="hidden bg-gradient-to-b from-neutral-500/10 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
+          className="hidden bg-gradient-to-b from-neutral-500/20 to-neutral-500/0 bg-clip-text text-[10rem] leading-none font-black text-transparent select-none sm:block lg:text-[16rem]"
         >
           Dorian Lopez
         </div>
@@ -204,13 +197,6 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
-      <Presentation />
-      <Experience />
-      <Education />
-      <Skills />
-      <AllProjects />
-      <Resume />
-      <Contact />
       <FluidCursor />
     </div>
   );

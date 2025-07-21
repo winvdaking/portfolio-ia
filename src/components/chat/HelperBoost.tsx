@@ -34,70 +34,68 @@ interface HelperBoostProps {
 }
 
 const questions = {
-  Me: 'Who are you? I want to know more about you.',
-  Projects: 'What are your projects? What are you working on right now?',
-  Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: "What the craziest thing you've ever done? (mb?) What are your hobbies? ",
+  Me: 'Qui es-tu ? Je veux en savoir plus sur toi.',
+  Projects: 'Quels sont tes projets ? Sur quoi travailles-tu en ce moment ?',
+  Skills: 'Quelles sont tes compétences ? Donne-moi la liste de tes soft et hard skills.',
+  Fun: "Quelle est la chose la plus folle que tu aies jamais faite ? (mb ?) Quels sont tes hobbies ?",
   Contact:
-    'How can I reach you? What kind of project would make you say "yes" immediately?',
+    'Comment puis-je te contacter ? Quel type de projet te ferait dire "oui" immédiatement ?',
 };
 
 const questionConfig = [
-  { key: 'Me', color: '#329696', icon: Laugh },
-  { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
-  { key: 'Skills', color: '#856ED9', icon: Layers },
+  { key: 'Moi', color: '#329696', icon: Laugh },
+  { key: 'Projets', color: '#3E9858', icon: BriefcaseBusiness },
+  { key: 'Compétences', color: '#856ED9', icon: Layers },
   { key: 'Fun', color: '#B95F9D', icon: PartyPopper },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ];
 
-// Helper drawer data
+// Données du tiroir d’aide
 const specialQuestions = [
-  'Mountain Bike you said?? Show me!',
-  'Who are you?',
-  'Can I see your resume?',
-  'What projects are you most proud of?',
-  'What are your skills?',
-  'How can I reach you?',
-  "What's the craziest thing you've ever done?",
+  'Qui es-tu ?',
+  'Puis-je voir ton CV ?',
+  'De quels projets es-tu le plus fier ?',
+  'Quelles sont tes compétences ?',
+  'Comment puis-je te contacter ?',
 ];
 
 const questionsByCategory = [
   {
-    id: 'me',
-    name: 'Me',
+    id: 'moi',
+    name: 'Moi',
     icon: UserSearch,
     questions: [
-      'Who are you?',
-      'What are your passions?',
-      'How did you get started in tech?',
-      'Where do you see yourself in 5 years?',
+      'Qui es-tu ?',
+      'Quelles sont tes passions ?',
+      'Comment as-tu commencé dans la tech ?',
+      'Où te vois-tu dans 5 ans ?',
     ],
   },
   {
     id: 'professional',
-    name: 'Professional',
+    name: 'Professionnel',
     icon: BriefcaseIcon,
     questions: [
-      'Can I see your resume?',
-      'What makes you a valuable team member?',
-      'Where are you working now?',
-      'Why should I hire you?',
-      "What's your educational background?",
+      'Puis-je voir ton CV ?',
+      'Qu’est-ce qui fait de toi un atout pour une équipe ?',
+      'Où travailles-tu actuellement ?',
+      'Pourquoi devrais-je t’embaucher ?',
+      "Quel est ton parcours scolaire ?",
     ],
   },
   {
-    id: 'projects',
-    name: 'Projects',
+    id: 'projets',
+    name: 'Projets',
     icon: CodeIcon,
-    questions: ['What projects are you most proud of?'],
+    questions: ['De quels projets es-tu le plus fier ?'],
   },
   {
-    id: 'skills',
-    name: 'Skills',
+    id: 'compétences',
+    name: 'Compétences',
     icon: GraduationCapIcon,
     questions: [
-      'What are your skills?',
-      'How was your experience at École 42?',
+      'Quelles sont tes compétences ?',
+      'Comment s’est passée ton expérience à l’École 42 ?',
     ],
   },
   {
@@ -105,20 +103,18 @@ const questionsByCategory = [
     name: 'Fun',
     icon: PartyPopper,
     questions: [
-      'Mountain Bike you said?? Show me!',
-      "What's the craziest thing you've ever done?",
-      'Mac or PC?',
-      'What are you certain about that 90% get wrong?',
+      'Mac ou PC ?',
+      'Sur quoi es-tu certain alors que 90% des gens se trompent ?',
     ],
   },
   {
     id: 'contact',
-    name: 'Contact & Future',
+    name: 'Contact & Futur',
     icon: MailIcon,
     questions: [
-      'How can I reach you?',
-      "What kind of project would make you say 'yes' immediately?",
-      'Where are you located?',
+      'Comment puis-je te contacter ?',
+      "Quel type de projet te ferait dire 'oui' immédiatement ?",
+      'Où es-tu situé ?',
     ],
   },
 ];
@@ -186,12 +182,12 @@ export default function HelperBoost({
               {isVisible ? (
                 <>
                   <ChevronDown size={14} />
-                  Hide quick questions
+                  Cacher les questions
                 </>
               ) : (
                 <>
                   <ChevronUp size={14} />
-                  Show quick questions
+                  Afficher les questions
                 </>
               )}
             </button>
